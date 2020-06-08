@@ -1,0 +1,9 @@
+python ars_multi.py --action_dim 24 --obs_dim 1 --lr 0.05 --noise 0.05 --normal 1  --logdir Turning/Rad0.7_S1 --msg "Learning only bezier weights for radius = 0.7 obs = 1, scale = 1" --env Stoch2-v0 --roc 0.7 --scale 1 --episode_length 14
+python ars_multi.py --action_dim 24 --obs_dim 1 --lr 0.05 --noise 0.05 --normal 1  --logdir Turning/Rad0.7_Sneg1 --msg "Learning only bezier weights for radius = 0.7 obs = 1, scale = -1" --env Stoch2-v0 --roc 0.7 --scale -1 --episode_length 14
+
+python ars_multi.py --action_dim 24 --obs_dim 1 --lr 0.05 --noise 0.05 --normal 1  --logdir Turning/Rad0.7_Sneg1 --msg "Learning only bezier weights for radius = 0.7 obs = 1, scale = -1" --env Stoch2-v0 --roc 0.7 --scale -1 --episode_length 14
+
+python ars_multi.py --action_dim 12 --obs_dim 6 --lr 0.05 --noise 0.05 --normal 1  --logdir stable_walk --msg "Learning to walk stable" --env Stoch2-v0 --roc 1.0 --scale 1 --episode_length 200
+
+python ars_multi.py --action_dim 12 --obs_dim 6 --lr 0.05 --noise 0.05 --normal 1  --logdir stable_walk --msg "Learning to walk stable" --env Stoch2-v0 --roc 1.0 --scale 1 --episode_length 200
+python ars_multi.py --action_dim 10 --obs_dim 14 --lr 0.05 --noise 0.03 --normal 0  --logdir stable_walk_5jun --msg "Learning to walk stable_compliant" --env Stoch2-v0 --roc 10000 --scale 1 --episode_length 150

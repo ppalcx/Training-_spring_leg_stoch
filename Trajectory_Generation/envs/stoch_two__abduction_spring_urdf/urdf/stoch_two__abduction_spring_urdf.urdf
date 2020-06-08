@@ -1,0 +1,1523 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="stoch_two__abduction_spring_urdf">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.000129067991736851 -0.000342158297660957 0.0093408485666523"
+        rpy="0 0 0" />
+      <mass
+        value="0.259739448171724" />
+      <inertia
+        ixx="5.74948095182276E-05"
+        ixy="7.54633920037895E-09"
+        ixz="1.07903151513999E-08"
+        iyy="0.000116396536611965"
+        iyz="-1.12033093129272E-06"
+        izz="0.0001141289931923" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://stoch_two__abduction_spring_urdf/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.501960784313725 0.501960784313725 0.501960784313725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://stoch_two__abduction_spring_urdf/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="front_body_link">
+    <inertial>
+      <origin
+        xyz="0.140932267535982 3.08694714012441E-07 0.0200437153813344"
+        rpy="0 0 0" />
+      <mass
+        value="0.418808537136945" />
+      <inertia
+        ixx="0.000463777908240491"
+        ixy="-3.33113572867368E-11"
+        ixz="-4.80950874454111E-09"
+        iyy="0.000201821646265994"
+        iyz="1.27241620570117E-08"
+        izz="0.000326752262396329" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://stoch_two__abduction_spring_urdf/meshes/front_body_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://stoch_two__abduction_spring_urdf/meshes/front_body_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="motor_front_body_spine_joint"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_body_link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="front_left_abd_link">
+    <inertial>
+      <origin
+        xyz="-0.00110882035358037 -0.0327154340942827 -0.0480929598391266"
+        rpy="0 0 0" />
+      <mass
+        value="0.124373484679103" />
+      <inertia
+        ixx="3.84547212168369E-05"
+        ixy="-7.54990169891938E-09"
+        ixz="-1.07962338546307E-08"
+        iyy="3.84649558618675E-05"
+        iyz="-1.6180589577321E-06"
+        izz="2.92738421633406E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://stoch_two__abduction_spring_urdf/meshes/front_left_abd_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://stoch_two__abduction_spring_urdf/meshes/front_left_abd_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="motor_front_left_abd_joint"
+    type="revolute">
+    <origin
+      xyz="0.135197356097679 0.115117519222437 0.00739293061201084"
+      rpy="0 0 0" />
+    <parent
+      link="front_body_link" />
+    <child
+      link="front_left_abd_link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.06"
+      upper="-3.92"
+      effort="100"
+      velocity="100" />
+  </joint>
+  <link
+    name="fl_upper_hip_link">
+    <inertial>
+      <origin
+        xyz="-0.0383446494113472 -5.55111512312578E-17 -0.0383318704358328"
+        rpy="0 0 0" />
+      <mass
+        value="0.0117074826445671" />
+      <inertia
+        ixx="9.72918703579988E-06"
+        ixy="-1.04141895101897E-20"
+        ixz="-9.27307252501739E-06"
+        iyy="1.94470211761586E-05"
+        iyz="-1.02230524891218E-20"
+        izz="9.73539536432561E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://stoch_two__abduction_spring_urdf/meshes/fl_upper_hip_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://stoch_two__abduction_spring_urdf/meshes/fl_upper_hip_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="motor_fl_upper_hip_joint"
+    type="revolute">
+    <origin
+      xyz="-0.0186499999340881 -0.00149999933174336 -0.0384999947870973"
+      rpy="0 0 0" />
+    <parent
+      link="front_left_abd_link" />
+    <child
+      link="fl_upper_hip_link" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-0.78"
+      upper="0.78"
+      effort="100"
+      velocity="100" />
+  </joint>
+  <link
+    name="fl_lower_hip_link">
+    <inertial>
+      <origin
+        xyz="0.0408620276127472 0.000114318215220024 -0.10942942192865"
+        rpy="0 0 0" />
+      <mass
+        value="0.0304267158746561" />
+      <inertia
+        ixx="2.23503755194058E-05"
+        ixy="-3.16887576759191E-11"
+        ixz="9.84049282914086E-06"
+        iyy="2.83096143283062E-05"
+        iyz="2.31897934032399E-09"
+        izz="6.72397413422221E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://stoch_two__abduction_spring_urdf/meshes/fl_lower_hip_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://stoch_two__abduction_spring_urdf/meshes/fl_lower_hip_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fl_lower_hip_joint"
+    type="continuous">
+    <origin
+      xyz="-0.0848672347682571 0.00450000000000043 -0.0848383902651951"
+      rpy="0 0 0" />
+    <parent
+      link="fl_upper_hip_link" />
+    <child
+      link="fl_lower_hip_link" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="spring_fl">
+    <inertial>
+      <origin
+        xyz="0.0008375 5.5511E-17 -0.021195"
+        rpy="0 0 0" />
+      <mass
+        value="0.02" />
+      <inertia
+        ixx="3.8646E-08"
+        ixy="-5.4205E-23"
+        ixz="-1.0551E-08"
+        iyy="5.6208E-08"
+        iyz="3.4007E-23"
+        izz="2.0559E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://stoch_two__abduction_spring_urdf/meshes/spring_fl.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://stoch_two__abduction_spring_urdf/meshes/spring_fl.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="prismatic_fl"
+    type="prismatic">
+    <origin
+      xyz="0.059295 0.0002 -0.12141"
+      rpy="0 0 0" />
+    <parent
+      link="fl_lower_hip_link" />
+    <child
+      link="spring_fl" />
+    <axis
+      xyz="-0.54606 0 0.83775" />
+    <limit
+      lower="-0.001"
+      upper="0.001"
+      effort="100"
+      velocity="100" />
+    <dynamics
+      damping="500" />
+  </joint>
+  <link
+    name="fl_upper_knee_link">
+    <inertial>
+      <origin
+        xyz="0.00500741448929856 1.38777878078145E-17 -0.0137551107327415"
+        rpy="0 0 0" />
+      <mass
+        value="0.00159686614944862" />
+      <inertia
+        ixx="4.10803441978608E-07"
+        ixy="-6.34539643451113E-23"
+        ixz="1.31607832982323E-07"
+        iyy="5.05602172304821E-07"
+        iyz="1.69033138911796E-23"
+        izz="9.71940295503859E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://stoch_two__abduction_spring_urdf/meshes/fl_upper_knee_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://stoch_two__abduction_spring_urdf/meshes/fl_upper_knee_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="motor_fl_upper_knee_joint"
+    type="revolute">
+    <origin
+      xyz="0.0163500000000081 -0.00149999933174279 -0.0384999938972361"
+      rpy="0 0 0" />
+    <parent
+      link="front_left_abd_link" />
+    <child
+      link="fl_upper_knee_link" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-1.22"
+      upper="1.22"
+      effort="100"
+      velocity="100" />
+  </joint>
+  <link
+    name="fl_lower_knee_link">
+    <inertial>
+      <origin
+        xyz="-0.0641706601867951 -5.55111512312578E-17 -0.0434554527210436"
+        rpy="0 0 0" />
+      <mass
+        value="0.0317424901804665" />
+      <inertia
+        ixx="2.47046438626632E-05"
+        ixy="-5.72073776083319E-20"
+        ixz="-3.54901292302268E-05"
+        iyy="7.77365346235803E-05"
+        iyz="-3.85353720585192E-20"
+        izz="5.30795044961879E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://stoch_two__abduction_spring_urdf/meshes/fl_lower_knee_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://stoch_two__abduction_spring_urdf/meshes/fl_lower_knee_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fl_lower_knee_joint"
+    type="continuous">
+    <origin
+      xyz="0.0136831308327143 0.00800000000000324 -0.0375868584829169"
+      rpy="0 0 0" />
+    <parent
+      link="fl_upper_knee_link" />
+    <child
+      link="fl_lower_knee_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="front_right_abd_link">
+    <inertial>
+      <origin
+        xyz="-0.00119117964642199 0.0327154156421657 -0.0480929723912521"
+        rpy="0 0 0" />
+      <mass
+        value="0.124373484679129" />
+      <inertia
+        ixx="3.84547212168473E-05"
+        ixy="-7.5498975598577E-09"
+        ixz="1.07962367477864E-08"
+        iyy="3.84649571034963E-05"
+        iyz="1.61805543131316E-06"
+        izz="2.92738409217309E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://stoch_two__abduction_spring_urdf/meshes/front_right_abd_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://stoch_two__abduction_spring_urdf/meshes/front_right_abd_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="motor_front_right_abd_joint"
+    type="revolute">
+    <origin
+      xyz="0.135197356230924 -0.115117528861792 0.00739294578802131"
+      rpy="0 0 0" />
+    <parent
+      link="front_body_link" />
+    <child
+      link="front_right_abd_link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.06"
+      upper="-3.92"
+      effort="100"
+      velocity="100" />
+  </joint>
+  <link
+    name="fr_upper_hip_link">
+    <inertial>
+      <origin
+        xyz="-0.0383446477630624 -1.47070194772558E-08 -0.0383318720846643"
+        rpy="0 0 0" />
+      <mass
+        value="0.0117074826445671" />
+      <inertia
+        ixx="9.72918783329113E-06"
+        ixy="-3.55785541198547E-12"
+        ixz="-9.27307252528368E-06"
+        iyy="1.94470211761573E-05"
+        iyz="-3.72611807838062E-12"
+        izz="9.73539456683589E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://stoch_two__abduction_spring_urdf/meshes/fr_upper_hip_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://stoch_two__abduction_spring_urdf/meshes/fr_upper_hip_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="motor_fr_upper_hip_joint"
+    type="revolute">
+    <origin
+      xyz="-0.0186500000000073 0.00149998633962198 -0.0384999944727477"
+      rpy="0 0 0" />
+    <parent
+      link="front_right_abd_link" />
+    <child
+      link="fr_upper_hip_link" />
+    <axis
+      xyz="0 -0.999999999999926 0" />
+    <limit
+      lower="-0.78"
+      upper="0.78"
+      effort="100"
+      velocity="100" />
+  </joint>
+  <link
+    name="fr_lower_hip_link">
+    <inertial>
+      <origin
+        xyz="0.0408624005500485 0.000114276229826876 -0.109429282713292"
+        rpy="0 0 0" />
+      <mass
+        value="0.0304267158746472" />
+      <inertia
+        ixx="2.23503084460548E-05"
+        ixy="-2.79210797378881E-11"
+        ixz="9.84054608399388E-06"
+        iyy="2.83096143300881E-05"
+        iyz="2.31069736774626E-09"
+        izz="6.72404120579568E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://stoch_two__abduction_spring_urdf/meshes/fr_lower_hip_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://stoch_two__abduction_spring_urdf/meshes/fr_lower_hip_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fr_lower_hip_joint"
+    type="continuous">
+    <origin
+      xyz="-0.0848672311201743 -0.00450003255045557 -0.0848383921879697"
+      rpy="0 0 0" />
+    <parent
+      link="fr_upper_hip_link" />
+    <child
+      link="fr_lower_hip_link" />
+    <axis
+      xyz="0 -0.999999999999926 0" />
+  </joint>
+  <link
+    name="spring_fr">
+    <inertial>
+      <origin
+        xyz="0.00083757 -8.1321E-09 -0.021195"
+        rpy="0 0 0" />
+      <mass
+        value="0.02" />
+      <inertia
+        ixx="3.8646E-08"
+        ixy="-4.0482E-15"
+        ixz="-1.0551E-08"
+        iyy="5.6208E-08"
+        iyz="-1.3678E-14"
+        izz="2.0559E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://stoch_two__abduction_spring_urdf/meshes/spring_fr.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://stoch_two__abduction_spring_urdf/meshes/spring_fr.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="prismatic_fr"
+    type="prismatic">
+    <origin
+      xyz="0.059295 0.00019995 -0.12141"
+      rpy="0 0 0" />
+    <parent
+      link="fr_lower_hip_link" />
+    <child
+      link="spring_fr" />
+    <axis
+      xyz="-0.54606 0 0.83774" />
+    <limit
+      lower="-0.001"
+      upper="0.001"
+      effort="100"
+      velocity="100" />
+    <dynamics
+      damping="500" />
+  </joint>
+  <link
+    name="fr_upper_knee_link">
+    <inertial>
+      <origin
+        xyz="0.00500745839832759 -5.2774995346061E-09 -0.0137550947480056"
+        rpy="0 0 0" />
+      <mass
+        value="0.00159686614944863" />
+      <inertia
+        ixx="4.10802601738561E-07"
+        ixy="5.04951484061588E-14"
+        ixz="1.31608834083366E-07"
+        iyy="5.05602172304777E-07"
+        iyz="-1.56696074365953E-13"
+        izz="9.7194869790509E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://stoch_two__abduction_spring_urdf/meshes/fr_upper_knee_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://stoch_two__abduction_spring_urdf/meshes/fr_upper_knee_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="motor_fr_upper_knee_joint"
+    type="revolute">
+    <origin
+      xyz="0.0163499999340886 0.00149998522847775 -0.0384999953626084"
+      rpy="0 0 0" />
+    <parent
+      link="front_right_abd_link" />
+    <child
+      link="fr_upper_knee_link" />
+    <axis
+      xyz="0 -0.999999999999926 0" />
+    <limit
+      lower="-1.22"
+      upper="1.22"
+      effort="100"
+      velocity="100" />
+  </joint>
+  <link
+    name="fr_lower_knee_link">
+    <inertial>
+      <origin
+        xyz="-0.0641706507751588 -1.66728200134969E-08 -0.0434554666191993"
+        rpy="0 0 0" />
+      <mass
+        value="0.0317424901804665" />
+      <inertia
+        ixx="2.47046592356554E-05"
+        ixy="-1.36167135359111E-11"
+        ixz="-3.54901353756828E-05"
+        iyy="7.77365346235767E-05"
+        iyz="-9.46031681848094E-12"
+        izz="5.30794891231993E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://stoch_two__abduction_spring_urdf/meshes/fr_lower_knee_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://stoch_two__abduction_spring_urdf/meshes/fr_lower_knee_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fr_lower_knee_joint"
+    type="continuous">
+    <origin
+      xyz="0.0136832508173868 -0.00800001442115761 -0.0375868117340345"
+      rpy="0 0 0" />
+    <parent
+      link="fr_upper_knee_link" />
+    <child
+      link="fr_lower_knee_link" />
+    <axis
+      xyz="0 0.999999999999926 0" />
+  </joint>
+  <link
+    name="back_body_link">
+    <inertial>
+      <origin
+        xyz="-0.140956896502492 -3.14350248021398E-07 0.0195799916260589"
+        rpy="0 0 0" />
+      <mass
+        value="0.422530260961795" />
+      <inertia
+        ixx="0.000464409562979019"
+        ixy="-3.33117865270045E-11"
+        ixz="4.80907890030873E-09"
+        iyy="0.00020214515751904"
+        iyz="8.84527093913057E-09"
+        izz="0.000327075773659621" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://stoch_two__abduction_spring_urdf/meshes/back_body_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://stoch_two__abduction_spring_urdf/meshes/back_body_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="motor_back_body_spine_joint"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="back_body_link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="back_left_abd_link">
+    <inertial>
+      <origin
+        xyz="-0.00140882033464229 -0.0327154464911706 -0.0480929514066434"
+        rpy="0 0 0" />
+      <mass
+        value="0.124373484679103" />
+      <inertia
+        ixx="3.84547212168457E-05"
+        ixy="-7.54990448759607E-09"
+        ixz="-1.07962309723074E-08"
+        iyy="3.8464955027741E-05"
+        iyz="-1.61806132676973E-06"
+        izz="2.92738429974584E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://stoch_two__abduction_spring_urdf/meshes/back_left_abd_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://stoch_two__abduction_spring_urdf/meshes/back_left_abd_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="motor_back_left_abd_joint"
+    type="revolute">
+    <origin
+      xyz="-0.13530264390232 0.115117522545566 0.00739298969795425"
+      rpy="0 0 0" />
+    <parent
+      link="back_body_link" />
+    <child
+      link="back_left_abd_link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.06"
+      upper="-3.92"
+      effort="100"
+      velocity="100" />
+  </joint>
+  <link
+    name="bl_upper_hip_link">
+    <inertial>
+      <origin
+        xyz="-0.0383381336713793 -9.90399671996212E-09 -0.0383383872402577"
+        rpy="0 0 0" />
+      <mass
+        value="0.0117074826445671" />
+      <inertia
+        ixx="9.73233928457207E-06"
+        ixy="-2.39577849174437E-12"
+        ixz="-9.27307304445245E-06"
+        iyy="1.9447021176158E-05"
+        iyz="-2.50937347050737E-12"
+        izz="9.7322431155541E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://stoch_two__abduction_spring_urdf/meshes/bl_upper_hip_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://stoch_two__abduction_spring_urdf/meshes/bl_upper_hip_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="motor_bl_upper_hip_joint"
+    type="revolute">
+    <origin
+      xyz="-0.01895 -0.0015 -0.0385"
+      rpy="0 0 0" />
+    <parent
+      link="back_left_abd_link" />
+    <child
+      link="bl_upper_hip_link" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-0.78"
+      upper="0.78"
+      effort="100"
+      velocity="100" />
+  </joint>
+  <link
+    name="bl_lower_hip_link">
+    <inertial>
+      <origin
+        xyz="0.0408428937519842 0.000114290031589581 -0.109436564825589"
+        rpy="0 0 0" />
+      <mass
+        value="0.030426715875105" />
+      <inertia
+        ixx="2.23538161722701E-05"
+        ixy="-2.8751028169547E-11"
+        ixz="9.83776002245928E-06"
+        iyy="2.83096143292105E-05"
+        iyz="2.31342582708908E-09"
+        izz="6.72053348022394E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://stoch_two__abduction_spring_urdf/meshes/bl_lower_hip_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://stoch_two__abduction_spring_urdf/meshes/bl_lower_hip_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="bl_lower_hip_joint"
+    type="continuous">
+    <origin
+      xyz="-0.0848528137451117 0.00449997807988266 -0.0848528149021467"
+      rpy="0 0 0" />
+    <parent
+      link="bl_upper_hip_link" />
+    <child
+      link="bl_lower_hip_link" />
+    <axis
+      xyz="0 -0.999999999999967 0" />
+  </joint>
+  <link
+    name="spring_bl">
+    <inertial>
+      <origin
+        xyz="0.00083379 -5.4632E-09 -0.021195"
+        rpy="0 0 0" />
+      <mass
+        value="0.02" />
+      <inertia
+        ixx="3.8642E-08"
+        ixy="-2.7204E-15"
+        ixz="-1.0554E-08"
+        iyy="5.6208E-08"
+        iyz="-9.1877E-15"
+        izz="2.0563E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://stoch_two__abduction_spring_urdf/meshes/spring_bl.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://stoch_two__abduction_spring_urdf/meshes/spring_bl.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="prismatic_bl"
+    type="prismatic">
+    <origin
+      xyz="0.059274 0.00019997 -0.12142"
+      rpy="0 0 0" />
+    <parent
+      link="bl_lower_hip_link" />
+    <child
+      link="spring_bl" />
+    <axis
+      xyz="-0.54591 0 0.83784" />
+    <limit
+      lower="-0.001"
+      upper="0.001"
+      effort="100"
+      velocity="100" />
+    <dynamics
+      damping="500" />
+  </joint>
+  <link
+    name="bl_upper_knee_link">
+    <inertial>
+      <origin
+        xyz="0.00500656360670479 -3.54259542534319E-09 -0.013755420458482"
+        rpy="0 0 0" />
+      <mass
+        value="0.00159686614944863" />
+      <inertia
+        ixx="4.10819722952596E-07"
+        ixy="3.38623857879335E-14"
+        ixz="1.31588432510409E-07"
+        iyy="5.05602172304798E-07"
+        iyz="-1.05196227990405E-13"
+        izz="9.71777485764293E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://stoch_two__abduction_spring_urdf/meshes/bl_upper_knee_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://stoch_two__abduction_spring_urdf/meshes/bl_upper_knee_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="motor_bl_upper_knee_joint"
+    type="revolute">
+    <origin
+      xyz="0.0160500000008828 -0.00150000924591775 -0.0384999935106098"
+      rpy="0 0 0" />
+    <parent
+      link="back_left_abd_link" />
+    <child
+      link="bl_upper_knee_link" />
+    <axis
+      xyz="0 -0.999999999999967 0" />
+    <limit
+      lower="-1.22"
+      upper="1.22"
+      effort="100"
+      velocity="100" />
+  </joint>
+  <link
+    name="bl_lower_knee_link">
+    <inertial>
+      <origin
+        xyz="-0.0641657542942606 -1.12397455370727E-08 -0.043462696371123"
+        rpy="0 0 0" />
+      <mass
+        value="0.0317424901804665" />
+      <inertia
+        ixx="2.47126568549893E-05"
+        ixy="-9.17917504560525E-12"
+        ixz="-3.54933314315602E-05"
+        iyy="7.77365346235786E-05"
+        iyz="-6.37801322514159E-12"
+        izz="5.30714915038632E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://stoch_two__abduction_spring_urdf/meshes/bl_lower_knee_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://stoch_two__abduction_spring_urdf/meshes/bl_lower_knee_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="bl_lower_knee_joint"
+    type="continuous">
+    <origin
+      xyz="0.0136808057283992 0.00799999031959546 -0.0375877068934536"
+      rpy="0 0 0" />
+    <parent
+      link="bl_upper_knee_link" />
+    <child
+      link="bl_lower_knee_link" />
+    <axis
+      xyz="0 0.999999999999967 0" />
+  </joint>
+  <link
+    name="back_right_abd_link">
+    <inertial>
+      <origin
+        xyz="-0.00149117964641937 0.0327154464903576 -0.0480929514066434"
+        rpy="0 0 0" />
+      <mass
+        value="0.124373484679103" />
+      <inertia
+        ixx="3.84547212168368E-05"
+        ixy="-7.54990448164978E-09"
+        ixz="1.07962319086228E-08"
+        iyy="3.84649550277497E-05"
+        iyz="1.61806132676348E-06"
+        izz="2.92738429974583E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://stoch_two__abduction_spring_urdf/meshes/back_right_abd_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://stoch_two__abduction_spring_urdf/meshes/back_right_abd_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="motor_back_right_abd_joint"
+    type="continuous">
+    <origin
+      xyz="-0.135302643769077 -0.115117525538681 0.00739294553027791"
+      rpy="0 0 0" />
+    <parent
+      link="back_body_link" />
+    <child
+      link="back_right_abd_link" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-0.06"
+      upper="-3.92"
+      effort="100"
+      velocity="100" />
+  </joint>
+  <link
+    name="br_upper_hip_link">
+    <inertial>
+      <origin
+        xyz="-0.0383381336713765 9.90399669220654E-09 -0.0383383872402605"
+        rpy="0 0 0" />
+      <mass
+        value="0.0117074826445671" />
+      <inertia
+        ixx="9.73233928457343E-06"
+        ixy="2.39577849110562E-12"
+        ixz="-9.27307304445247E-06"
+        iyy="1.94470211761581E-05"
+        iyz="2.5093734701317E-12"
+        izz="9.73224311555278E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://stoch_two__abduction_spring_urdf/meshes/br_upper_hip_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://stoch_two__abduction_spring_urdf/meshes/br_upper_hip_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="motor_br_upper_hip_joint"
+    type="revolute">
+    <origin
+      xyz="-0.0189500000000021 0.0015000129743382 -0.0384999935106054"
+      rpy="0 0 0" />
+    <parent
+      link="back_right_abd_link" />
+    <child
+      link="br_upper_hip_link" />
+    <axis
+      xyz="0 -0.999999999999967 0" />
+    <limit
+      lower="-0.78"
+      upper="0.78"
+      effort="100"
+      velocity="100" />
+  </joint>
+  <link
+    name="br_lower_hip_link">
+    <inertial>
+      <origin
+        xyz="0.0408428906970656 0.000114346399404774 -0.109436565906788"
+        rpy="0 0 0" />
+      <mass
+        value="0.0304267158750394" />
+      <inertia
+        ixx="2.23538167215228E-05"
+        ixy="-3.3815476149948E-11"
+        ixz="9.83775958603362E-06"
+        iyy="2.8309614326812E-05"
+        iyz="2.3245437158317E-09"
+        izz="6.72053293335597E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://stoch_two__abduction_spring_urdf/meshes/br_lower_hip_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://stoch_two__abduction_spring_urdf/meshes/br_lower_hip_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="br_lower_hip_joint"
+    type="continuous">
+    <origin
+      xyz="-0.0848528137451056 -0.00449997807963978 -0.0848528149021529"
+      rpy="0 0 0" />
+    <parent
+      link="br_upper_hip_link" />
+    <child
+      link="br_lower_hip_link" />
+    <axis
+      xyz="0 -0.999999999999967 0" />
+  </joint>
+  <link
+    name="spring_br">
+    <inertial>
+      <origin
+        xyz="0.00083379 5.4632E-09 -0.021195"
+        rpy="0 0 0" />
+      <mass
+        value="0.02" />
+      <inertia
+        ixx="3.8642E-08"
+        ixy="2.7204E-15"
+        ixz="-1.0554E-08"
+        iyy="5.6208E-08"
+        iyz="9.1877E-15"
+        izz="2.0563E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://stoch_two__abduction_spring_urdf/meshes/spring_br.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://stoch_two__abduction_spring_urdf/meshes/spring_br.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="prismatic_br"
+    type="prismatic">
+    <origin
+      xyz="0.059274 0.00020003 -0.12142"
+      rpy="0 0 0" />
+    <parent
+      link="br_lower_hip_link" />
+    <child
+      link="spring_br" />
+    <axis
+      xyz="-0.54591 0 0.83784" />
+    <limit
+      lower="-0.001"
+      upper="0.001"
+      effort="100"
+      velocity="100" />
+    <dynamics
+      damping="500" />
+  </joint>
+  <link
+    name="br_upper_knee_link">
+    <inertial>
+      <origin
+        xyz="0.00500656360669922 3.54259543922097E-09 -0.0137554204584841"
+        rpy="0 0 0" />
+      <mass
+        value="0.00159686614944862" />
+      <inertia
+        ixx="4.10819722952701E-07"
+        ixy="-3.38623859381081E-14"
+        ixz="1.31588432510285E-07"
+        iyy="5.05602172304796E-07"
+        iyz="1.05196228239126E-13"
+        izz="9.71777485763218E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://stoch_two__abduction_spring_urdf/meshes/br_upper_knee_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://stoch_two__abduction_spring_urdf/meshes/br_upper_knee_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="motor_br_upper_knee_joint"
+    type="revolute">
+    <origin
+      xyz="0.0160499999340941 0.00150001297458144 -0.0384999944004666"
+      rpy="0 0 0" />
+    <parent
+      link="back_right_abd_link" />
+    <child
+      link="br_upper_knee_link" />
+    <axis
+      xyz="0 -0.999999999999967 0" />
+    <limit
+      lower="-1.22"
+      upper="1.22"
+      effort="100"
+      velocity="100" />
+  </joint>
+  <link
+    name="br_lower_knee_link">
+    <inertial>
+      <origin
+        xyz="-0.0641657548478241 1.12397453289059E-08 -0.0434626955538746"
+        rpy="0 0 0" />
+      <mass
+        value="0.0317424901804665" />
+      <inertia
+        ixx="2.47126559508663E-05"
+        ixy="9.17917494176537E-12"
+        ixz="-3.54933310703673E-05"
+        iyy="7.77365346235786E-05"
+        iyz="6.37801298491404E-12"
+        izz="5.30714924079863E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://stoch_two__abduction_spring_urdf/meshes/br_lower_knee_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://stoch_two__abduction_spring_urdf/meshes/br_lower_knee_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="br_lower_knee_joint"
+    type="continuous">
+    <origin
+      xyz="0.013680805728384 -0.00799999031959545 -0.0375877068934591"
+      rpy="0 0 0" />
+    <parent
+      link="br_upper_knee_link" />
+    <child
+      link="br_lower_knee_link" />
+    <axis
+      xyz="0 0.999999999999967 0" />
+  </joint>
+</robot>
